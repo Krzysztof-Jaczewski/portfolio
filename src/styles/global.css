@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background: radial-gradient(
+    at top left,
+    rgba(146, 43, 225, 1) 0%,
+    rgba(43, 9, 107, 1) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 40px auto;
+}
+
+nav .links {
+  display: inline-block;
+  text-align: right;
+}
+
+nav a {
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 20px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+  border-color: white;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #bbb;
+  margin: 20px auto;
+}
