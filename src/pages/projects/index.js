@@ -4,7 +4,7 @@ import Layout from "../../componets/Layout"
 import * as styles from "../../styles/projects.module.css"
 
 const Projects = ({ data }) => {
-  const projects = data.allMarkdownRemark.nodes
+  const projects = data.projects.nodes
   return (
     <Layout>
       <div className={styles.portfolio}>
@@ -29,10 +29,9 @@ export default Projects
 
 export const query = graphql`
   query MyQuery {
-    site {
-      id
-    }
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+    projects: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
         id
         frontmatter {
