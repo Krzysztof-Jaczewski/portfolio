@@ -1,23 +1,27 @@
 import { graphql, Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../componets/Layout"
-import * as styles from "../styles/home.module.css"
-const Home = () => {
+import { header, image, button } from "./home.module.css"
+import "./global.css"
+const Home = ({ data }) => {
+  const { name } = data.site.siteMetadata
   return (
     <Layout>
-      <section className={styles.header}>
+      <section className={header}>
         <div>
-          <h2>Design</h2>
+          <h2> {name}</h2>
           <h3>frond-end designer</h3>
-          <p> lorem ispum </p>
-          <Link to="/projects" className={styles.button}>
+          <Link to="/projects" className={button}>
             Check projects
           </Link>
         </div>
-        <img
-          src="/dev.svg"
+        <StaticImage
+          className={image}
+          as="div"
+          src="../images/dev.png"
           alt="devImage"
-          style={{ maxWidth: "100%", minWidth: "300px" }}
+          placeholder="blurred"
         />
       </section>
     </Layout>
@@ -27,10 +31,10 @@ const Home = () => {
 export default Home
 
 export const query = graphql`
-  query DevImage {
-    file(relativePath: { eq: "snowman.png" }) {
-      childImageSharp {
-        gatsbyImageData
+  query Heders {
+    site {
+      siteMetadata {
+        name
       }
     }
   }
