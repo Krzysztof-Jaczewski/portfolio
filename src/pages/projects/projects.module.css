@@ -12,20 +12,20 @@
   font-weight: 400;
 }
 
-.projects {
+.styledProjects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
   margin: 80px 20px;
 }
 
-.projects h3 {
+.styledProjects h3 {
   text-align: center;
   margin: 20px auto 0;
   font-weight: 500;
 }
 
-.projects p {
+.styledProjects p {
   color: #ccc;
   margin-top: 4px;
 }

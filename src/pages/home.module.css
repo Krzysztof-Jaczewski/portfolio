@@ -1,7 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
 }
 
@@ -12,7 +11,18 @@
 .header h3 {
   font-size: 3em;
   font-weight: 400;
-  margin-bottom: 20px;
+}
+
+.image {
+  transform: translate(200px, -140px);
+  width: 80%;
+}
+
+@media (max-width: 787px) {
+  .image {
+    transform: translate(-60px, 10px);
+    width: 120%;
+  }
 }
 
 .button {

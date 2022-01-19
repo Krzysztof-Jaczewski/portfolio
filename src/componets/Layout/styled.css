@@ -1,0 +1,10 @@
+.layout {
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  margin-top: 100px;
+}

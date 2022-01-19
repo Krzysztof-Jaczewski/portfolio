@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background: radial-gradient(
+    at top left,
+    rgba(146, 43, 225, 1) 0%,
+    rgba(43, 9, 107, 1) 100%
+  );
+  background-repeat: no-repeat;
+}
