@@ -1,6 +1,7 @@
 import React from "react"
-import Navbar from "./Navbar"
-import "../styles/global.css"
+import Footer from "../Footer"
+import Navbar from "../Navbar/Navbar"
+import "./styled.css"
 
 const Layout = ({ children }) => {
   return (
@@ -9,7 +10,7 @@ const Layout = ({ children }) => {
         <Navbar />
         <div className="content">{children}</div>
       </div>
-      <footer>Copyright 2022</footer>
+      <Footer />
     </>
   )
 }
