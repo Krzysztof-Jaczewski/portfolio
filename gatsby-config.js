@@ -21,7 +21,13 @@ module.exports = {
   ],
   siteMetadata: {
     title: "Web Developer",
+    name: "Krzysztof Jaczewski",
     description: "Web front-end developer",
-    copyright: "this site was created in 2022 ",
+    copyright: "This site was created in 2022 ",
+    navigation: [
+      { name: "Home", link: "/" },
+      { name: "About", link: "/about" },
+      { name: "Projects", link: "/projects" },
+    ],
   },
 }
