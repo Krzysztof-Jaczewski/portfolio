@@ -1,23 +1,15 @@
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import "./styled.css"
 
 const Footer = () => {
-  const data = useStaticQuery(
-    graphql`
-      query SiteInfo {
-        site {
-          siteMetadata {
-            copyright
-          }
-        }
-      }
-    `
+  return (
+    <footer>
+      <p>
+        &copy; {new Date().getFullYear()} <span>Portfolio build with </span>
+        <a href="https://www/gatsbyjs.com">Gatsby</a>
+      </p>
+    </footer>
   )
-
-  const { copyright } = data.site.siteMetadata
-
-  return <footer>{copyright}</footer>
 }
 
 export default Footer
