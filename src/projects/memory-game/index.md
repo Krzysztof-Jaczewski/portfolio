@@ -1,6 +1,6 @@
 ---
 title: Memory-Game
-stack: React, Redux
+stack: [React, Redux]
 slug: memory-game
 icon: ./memory.png
 date: 2022-01-05T00:00:00.000Z
