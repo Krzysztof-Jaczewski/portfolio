@@ -14,7 +14,7 @@ import {
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Projects = ({ data }) => {
-  const projects = data.allMarkdownRemark.nodes
+  const projects = data.allMdx.nodes
   return (
     <Layout>
       <div className={portfolio}>
@@ -56,7 +56,7 @@ export default Projects
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMdx {
       nodes {
         frontmatter {
           icon {

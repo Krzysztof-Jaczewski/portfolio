@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
   )
   const { data } = await graphql(`
     query Projects {
-      allMarkdownRemark {
+      allMdx {
         nodes {
           frontmatter {
             slug
@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  data.allMarkdownRemark.nodes.forEach(node => {
+  data.allMdx.nodes.forEach(node => {
     createPage({
       path: `/projects/${node.frontmatter.slug}`,
       component: projectTemplate,
