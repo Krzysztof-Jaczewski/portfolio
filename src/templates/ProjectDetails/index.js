@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../componets/Layout"
 import "normalize.css"
-import { details, featured } from "./ProjectDetails.module.css"
+import { details, featured } from "./projectDetails.module.css"
 
 const ProjectDetails = () => {
   return (
